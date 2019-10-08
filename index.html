@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" ng-app= "App">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel= "stylesheet" href= "styles.css">
+    <title>Billing Calculator</title>
+</head>
+<body>
+    <header>
+
+    </header>
+    <section ng-controller= "CalendarController as $ctrl">
+        <div ng-submit= "$ctrl.submitDate" class= "date-form">
+            <label class= "date-label">Date of Cancellation: </label>
+            <input class="date-input" type= date name= "cancel-date" min= "2019-04-01" max="2025-01-01">
+            <button>Submit</button>
+        </div>
+        
+        <div>
+            <p>Date of Last Bill: {{$ctrl.billDate}}</p>
+            <p>Services Shut Off: {{$ctrl.servDate}}</p>
+        </div>
+    </section>
+    
+
+    <script src = "https://code.angularjs.org/1.6.5/angular.js"></script>
+    <script src = "module.js"></script>
+    <script src = "controller.js"></script>
+</body>
+</html>
